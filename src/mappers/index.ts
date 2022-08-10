@@ -1,8 +1,8 @@
 import { ICountry } from "../types/index";
-import { IData } from "../types/index";
+import { IInitialCountry } from "../types/index";
 
-export const transformeCountries = (countries: IData) => {
-  const transformedCountries: ICountry[] = countries.map((country: any) => {
+export const transformeCountries = (countries: IInitialCountry[]) => {
+  const transformedCountries: ICountry[] = countries.map((country) => {
     return {
       flag: country.flags.svg,
       name: country.name.common,
